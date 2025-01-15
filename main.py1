@@ -1,0 +1,76 @@
+# Rule-Based Chatbot
+
+print("Hi! I am ChatBot. How can I help you today?")
+print("Type 'exit' to end the conversation.")
+
+# Dictionary of responses for friends
+
+responses = {
+    "hi": "Hey, what's up?",
+    "hello": "Hi there! How's it going?",
+    "how are you": "I'm doing great, thanks for asking! How about you?",
+    "what's up": "Not much! Just hanging out. What about you?",
+    "bye": "See you later! Take care!",
+    "good morning": "Good morning! Hope you have an amazing day ahead!",
+    "good night": "Good night! Sleep well and dream sweet!",
+    "how was your day": "It was good, thanks for asking! How about yours?",
+    "what are you doing": "Just chilling, thinking about what we should do next!",
+    "what's new": "Not much, just the usual. Got anything exciting going on?",
+    "tell me a joke": "Why don't skeletons fight each other? They don't have the guts.",
+    "thank you": "You're welcome! Always happy to help!",
+    "sorry": "No worries! It's all good.",
+    "you're awesome": "You're awesome too! Glad we’re friends!",
+    "what's your favorite movie": "I love watching movies! I'd say 'The Avenger: End Game' is one of my favorites. How about you?",
+    "who's your favorite superhero": "I think I'd go with Spider-Man. Who’s your favorite?",
+    "let's hang out": "Absolutely! When are we meeting?",
+    "let's play a game": "Sounds fun! What do you want to play?",
+    "how old are you": "Age is just a number, but I’m eternally young!",
+    "what's your favorite food": "I love pizza, but honestly, any food is good if we’re eating together!",
+    "do you like music": "Of course! Music is life. What do you like to listen to?",
+    "are you busy": "Not really! What's up? Need anything?",
+    "how do you feel": "I’m feeling good, thanks for checking in! How are you?",
+    "how can I help you": "You're always helping me just by being here, thank you!",
+    "you always make me laugh": "That's what friends are for, right? Glad I can make you smile!",
+    "want to grab coffee": "Yes! Coffee sounds amazing right now. When?",
+    "what's the plan": "Let's figure it out together! What do you feel like doing?",
+    "you're my best friend": "Aww, you're my best friend too! I'm lucky to have you!",
+    "let's travel together": "That would be amazing! Where do you want to go?",
+    "tell me a secret": "Okay, here’s a secret... I’m always here for you, no matter what.",
+    "can you help me with something": "Of course! What do you need help with?",
+    "do you have a pet": "I don’t have a pet, but I’d love one! Do you?",
+    "do you believe in aliens": "I think there’s a good chance they exist. What about you?",
+    "who's your favorite character": "I love so many characters! But I’d say Sherlock Holmes is a legend. Who’s yours?",
+    "let's watch a movie": "Great idea! What movie should we watch?",
+    "what's your favorite season": "I love fall! The weather is perfect and everything looks so beautiful. How about you?",
+    "what's your favorite hobby": "I love playing video games and reading. What about you?",
+    "what's your dream job": "I think I’d love to be a travel writer! What about you?",
+    "are you a morning person": "Not really, I need my coffee first! How about you?",
+    "are you a night owl": "Absolutely, I come alive at night! You too?",
+    "what's the most embarrassing thing you've done": "Hmm, let's save that for another time! What's the most embarrassing thing you’ve done?",
+    "do you remember our first meeting": "Of course! It was an awesome day. Do you remember it?",
+    "you've got a great sense of humor": "Thanks! You’re pretty funny yourself!",
+    "what's your favorite place": "I’d love to go to the beach. How about you?",
+    "do you believe in fate": "I’m not sure, but I think we’re all in the right place at the right time. What do you think?",
+    "are you coming to the party": "Of course! Can’t miss it! Are you going?",
+    "what should I wear to the party": "Something comfy but stylish! Whatever you feel good in.",
+    "let's start a project": "I'm in! What kind of project do you have in mind?",
+    "what's the craziest thing you've done": "I once went bungee jumping! What’s the craziest thing you've done?",
+    "do you like surprises": "I do! Surprises are the best, as long as they’re good ones.",
+    "what’s your favorite color": "I’d say blue, but I like lots of colors! What’s yours?",
+    "can we go on an adventure": "Adventure? Count me in! Let’s plan it!"
+    
+}
+
+
+while True:
+    # Get user input
+    user_input = input("\nYou: ").lower()
+
+    # Check for exit condition
+    if user_input == "exit":
+        print("ChatBot: Bye! Take care!")
+        break
+
+    # Provide a response or fallback
+    response = responses.get(user_input, "I'm sorry, I don't understand that.")
+    print(f"ChatBot: {response}")
